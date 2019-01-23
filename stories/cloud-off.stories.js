@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs, text, number } from '@storybook/addon-knobs';
 import CloudOff, { DEFAULT_PROPS } from '../src/components/cloud-off';
 
-const dynamicStories = storiesOf('Components/CloudOff', module);
+const dynamicStories = storiesOf('SubComponents/CloudOff', module);
 dynamicStories.addDecorator(withKnobs);
 
 dynamicStories.add('Example', () => {

@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs, text, number } from '@storybook/addon-knobs';
 import Rolling, { DEFAULT_PROPS } from '../src/components/rolling';
 
-const dynamicStories = storiesOf('Components/Rolling', module);
+const dynamicStories = storiesOf('SubComponents/Rolling', module);
 dynamicStories.addDecorator(withKnobs);
 
 dynamicStories.add('Example', () => {

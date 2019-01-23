@@ -52,9 +52,4 @@ class App extends Component {
 |fadeIn| Boolean | No | Load the image with Fade In effect| True
 
 # Demo
-You want to see some examples? Easy, follow this steps:
-
-* Clone this Repo https://github.com/iamgutz/react-image-loader-hoc
-* Install dependencies, run `yarn` or `npm install`
-* Run Storybook `yarn storybook` or `npm run storybook`
-* It will open your browser with the storybook examples
+You want to see some examples? Go to [Online Demo](https://iamgutz.github.io/react-image-loader-hoc/)

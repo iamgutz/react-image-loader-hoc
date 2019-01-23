@@ -1,9 +1,10 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import React, { Fragment } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, text, boolean } from '@storybook/addon-knobs';
 import withImageLoader from '../src/index';
+import { Content, Title } from './styles';
 
 const Image = props => (<img alt="" {...props} />);
 const StyledImage = styled.div`
@@ -16,10 +17,10 @@ const StyledImage = styled.div`
   font-size: inherit;
 `;
 
-const dynamicStories = storiesOf('Image Loader HOC', module);
+const dynamicStories = storiesOf('DEMO', module);
 dynamicStories.addDecorator(withKnobs);
 
-dynamicStories.add('Example', () => {
+dynamicStories.add('Basic Usage', () => {
   const knobs = {
     src: 'https://edmullen.net/test/rc.jpg',
     fadeIn: true,
@@ -29,8 +30,8 @@ dynamicStories.add('Example', () => {
   const ImageWithLoader = withImageLoader(Image);
   const StyledImageWithLoader = withImageLoader(StyledImage);
   return (
-    <Fragment>
-      <h1>React Image Loader HOC</h1>
+    <Content>
+      <Title>React Image Loader HOC</Title>
       <p>Example: Regular img tag Component</p>
       <ImageWithLoader
         src={text('src', knobs.src)}
@@ -45,6 +46,6 @@ dynamicStories.add('Example', () => {
         width={text('width', knobs.width)}
         height={text('height', knobs.height)}
       />
-    </Fragment>
+    </Content>
   );
 });
