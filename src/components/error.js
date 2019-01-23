@@ -13,7 +13,11 @@ const Error = ({ component, width, height }) => {
 };
 
 Error.propTypes = {
-  component: PropTypes.node,
+  component: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.object,
+    PropTypes.node,
+  ]),
   width: PropTypes.string,
   height: PropTypes.string,
 };
