@@ -17,7 +17,7 @@ const EnhancedComponent = ({ component, fadeIn, ...rest }) => {
 };
 
 EnhancedComponent.propTypes = {
-  component: PropTypes.node,
+  component: PropTypes.func,
   fadeIn: PropTypes.bool.isRequired,
 };
 

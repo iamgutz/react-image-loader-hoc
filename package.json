@@ -59,12 +59,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/iamgutz/react-dialogify.git"
+    "url": "git+https://github.com/iamgutz/react-image-loader-hoc.git"
   },
   "bugs": {
-    "url": "https://github.com/iamgutz/react-dialogify/issues"
+    "url": "https://github.com/iamgutz/react-image-loader-hoc/issues"
   },
-  "homepage": "https://github.com/iamgutz/react-dialogify#readme",
+  "homepage": "https://github.com/iamgutz/react-image-loader-hoc#readme",
   "keywords": [
     "React",
     "Image",
