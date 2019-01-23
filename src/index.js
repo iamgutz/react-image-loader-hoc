@@ -76,10 +76,7 @@ export default WrappedComponent => {
 
     handleImageLoading() {
       const { src } = this.props;
-      this.setState({
-        imageLoaded: false,
-        imageError: false,
-      });
+      this.resetState();
       this.domImg.src = src;
       this.domImg.onload = () => this.handleOnLoad();
       this.domImg.onerror = () => this.handleOnError();
@@ -87,7 +84,7 @@ export default WrappedComponent => {
 
     render() {
       const { imageLoaded, imageError } = this.state;
-      const { spinnerSize, loaderComp, errorComp, fadeIn, ...rest } = this.props;
+      const { loaderComp, errorComp, fadeIn, ...rest } = this.props;
 
       if (!imageLoaded && !imageError) {
         return (
@@ -111,7 +108,6 @@ export default WrappedComponent => {
 
   ImageLoaderHOC.propTypes = {
     src: PropTypes.string.isRequired,
-    spinnerSize: PropTypes.string,
     onLoad: PropTypes.func,
     onError: PropTypes.func,
     loaderComp: PropTypes.node,
@@ -120,7 +116,6 @@ export default WrappedComponent => {
   };
 
   ImageLoaderHOC.defaultProps = {
-    spinnerSize: null,
     onLoad() {},
     onError() {},
     loaderComp: null,
