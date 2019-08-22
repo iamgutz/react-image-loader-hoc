@@ -13,7 +13,8 @@ export default WrappedComponent => {
         imageError: false,
       };
       this._isMounted = false;
-      this.domImg = new window.Image();
+      this.isBrowser = !!(typeof window !== 'undefined' && window.document && window.document.createElement);
+      this.domImg = this.isBrowser ? new window.Image() : {};
       this.setImageLoaded = this.setImageLoaded.bind(this);
       this.setImageError = this.setImageError.bind(this);
       this.resetState = this.resetState.bind(this);
