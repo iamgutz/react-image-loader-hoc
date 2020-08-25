@@ -4,14 +4,14 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs, text, number } from '@storybook/addon-knobs';
 import Rolling, { DEFAULT_PROPS } from '../src/components/rolling';
 
-const dynamicStories = storiesOf('SubComponents/Rolling', module);
+const dynamicStories = storiesOf('SubComponents/LoadComp', module);
 dynamicStories.addDecorator(withKnobs);
 
 dynamicStories.add('Example', () => {
   const knobs = DEFAULT_PROPS;
   return (
     <Fragment>
-      <h1>Rolling spinner</h1>
+      <h1>Loading Component</h1>
       <Rolling
         size={number('size (pixels)', knobs.size)}
         color={text('color', knobs.color)}
