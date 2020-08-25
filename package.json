@@ -9,7 +9,8 @@
   "scripts": {
     "prerelease": "git add --all && git commit -m\"Publishing update\"",
     "push-master": "git push origin master",
-    "release": "npm login && npm version patch && npm run push-master && npm publish",
+    "release": "npm login && npm version patch && npm run push-master && npm publish && npm run release-demo",
+    "release-demo": "npm run build-storybook && npm run deploy-storybook",
     "prepublish": "npm run build",
     "prebuild": "npm run clean-dist && npm run lint && npm run test",
     "build": "babel src --out-dir dist --ignore test.js",
