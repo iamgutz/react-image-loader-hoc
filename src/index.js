@@ -111,8 +111,16 @@ export default WrappedComponent => {
     src: PropTypes.string.isRequired,
     onLoad: PropTypes.func,
     onError: PropTypes.func,
-    loaderComp: PropTypes.node,
-    errorComp: PropTypes.node,
+    loaderComp: PropTypes.oneOfType([
+      PropTypes.node,
+      PropTypes.func,
+      PropTypes.elementType,
+    ]),
+    errorComp: PropTypes.oneOfType([
+      PropTypes.node,
+      PropTypes.func,
+      PropTypes.elementType,
+    ]),
     fadeIn: PropTypes.bool,
   };
 
