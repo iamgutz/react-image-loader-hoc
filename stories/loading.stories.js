@@ -12,6 +12,7 @@ dynamicStories.add('Example', () => {
   return (
     <Fragment>
       <h1>Loading Component</h1>
+      
       <Rolling
         size={number('size (pixels)', knobs.size)}
         color={text('color', knobs.color)}

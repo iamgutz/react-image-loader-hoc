@@ -12,6 +12,7 @@ dynamicStories.add('Example', () => {
   return (
     <Fragment>
       <h1>Error Component</h1>
+      
       <CloudOff
         size={number('size (pixels)', knobs.size)}
         color={text('color', knobs.color)}
