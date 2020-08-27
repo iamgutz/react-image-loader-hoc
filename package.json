@@ -1,6 +1,6 @@
 {
   "name": "react-image-loader-hoc",
-  "version": "1.0.11",
+  "version": "1.1.0",
   "description": "React High Order Component (HOC) to handle Image Components pre-loading state and onLoad error state",
   "main": "dist/index.js",
   "engines": {
@@ -83,7 +83,23 @@
     "High Order Component",
     "Preloader",
     "HOC",
-    "Easy"
+    "Easy",
+    "Lightweight",
+    "react-component",
+    "lazyload",
+    "lazyloading",
+		"lazy-loading",
+    "lazyload-images",
+    "image-lazy-load",
+    "image-lazy-loader",
+    "react-image-lazy-load",
+    "react-image-lazy-loader",
+    "lazy load",
+    "lazy loader",
+    "image lazy load",
+    "image lazy loader",
+    "react image lazy load",
+    "react image lazy loader"
   ],
   "author": "Michael Gutierrez",
   "license": "MIT"
