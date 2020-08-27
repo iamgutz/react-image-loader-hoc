@@ -1,8 +1,13 @@
+scripts
 src
+stories
+storybook-static
+screenshots
 .babelrc
 .eslintignore
 .eslintrc
 .DS_Store
 .storybook
-stories
-screenshots
+yarn.lock
+yarn-error.log
+webpack.config.js

@@ -7,13 +7,15 @@
     "node": ">=8.11.1"
   },
   "scripts": {
+    "analyze": "node scripts/analyze.js",
     "prerelease": "git add --all && git commit -m\"Publishing update\"",
     "push-master": "git push origin master",
     "release": "npm login && npm version patch && npm run push-master && npm publish && npm run release-demo",
     "release-demo": "npm run build-storybook && npm run deploy-storybook",
     "prepublish": "npm run build",
     "prebuild": "npm run clean-dist && npm run lint && npm run test",
-    "build": "babel src --out-dir dist --ignore test.js",
+    "build": "webpack",
+    "build:babel": "babel src --out-dir dist --ignore test.js",
     "clean-dist": "rimraf ./dist",
     "lint": "eslint src",
     "lint-fix": "eslint src --fix",
@@ -60,7 +62,11 @@
     "mocha": "^5.2.0",
     "np": "^5.0.3",
     "npm": "^6.4.1",
-    "rimraf": "^2.6.1"
+    "progress-bar-webpack-plugin": "^2.1.0",
+    "rimraf": "^2.6.1",
+    "webpack": "^4.44.1",
+    "webpack-bundle-analyzer": "^3.8.0",
+    "webpack-cli": "^3.3.12"
   },
   "repository": {
     "type": "git",
