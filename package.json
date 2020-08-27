@@ -9,7 +9,7 @@
   "scripts": {
     "analyze": "node scripts/analyze.js",
     "prerelease": "git add --all && git commit -m\"Publishing update\"",
-    "push-master": "git push origin master",
+    "push-master": "git push origin master --force",
     "release": "npm login && npm version patch && npm run push-master && npm publish && npm run release-demo",
     "release-demo": "npm run build-storybook && npm run deploy-storybook",
     "prepublish": "npm run build",
