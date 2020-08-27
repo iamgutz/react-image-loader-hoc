@@ -2,22 +2,20 @@
 import React, { Fragment } from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, text, number } from '@storybook/addon-knobs';
-import Rolling, { DEFAULT_PROPS } from '../src/components/rolling';
+import CloudOff, { DEFAULT_PROPS } from '../src/components/cloud-off';
 
-const dynamicStories = storiesOf('SubComponents/Rolling', module);
+const dynamicStories = storiesOf('SubComponents/errorComp', module);
 dynamicStories.addDecorator(withKnobs);
 
 dynamicStories.add('Example', () => {
   const knobs = DEFAULT_PROPS;
   return (
     <Fragment>
-      <h1>Rolling spinner</h1>
-      <Rolling
+      <h1>Error Component</h1>
+      
+      <CloudOff
         size={number('size (pixels)', knobs.size)}
         color={text('color', knobs.color)}
-        strokeThickness={number('strokeThickness', knobs.strokeThickness)}
-        dasharray={text('dasharray', knobs.dasharray)}
-        duration={number('duration (seconds)', knobs.duration)}
       />
     </Fragment>
   );
